@@ -9,8 +9,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/open?id=1T_z46OhonltFQhlXxL_lGkvXbmKwMxnS'
-export_file_name = 'good_champi_stage-2.pkl'
+export_file_url = 'https://drive.google.com/open?id=1ZPKYJwqFw7VhKZfX2wiHpzTch3QmVF11'
+export_file_name = 'export.pkl'
 
 classes = ['cepes', 'girolles', 'trompettes', 'chanterelles', 'sanguins','oronges','pied_de_moutons']
 path = Path(__file__).parent
