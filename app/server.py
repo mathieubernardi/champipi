@@ -10,7 +10,7 @@ from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
 export_file_url = 'https://drive.google.com/open?id=1NuZsy218rwwibigEeTiwISd8JNpE7TGH'
-export_file_name = 'good_champi_stage-2.pth'
+export_file_name = 'export.pth'
 
 classes = ['cepes', 'girolles', 'trompettes', 'chanterelles', 'sanguins','oronges','pied_de_moutons']
 path = Path(__file__).parent
