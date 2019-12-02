@@ -11,10 +11,10 @@ from starlette.staticfiles import StaticFiles
 
 #export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
 #export_file_url = 'https://drive.google.com/drive/folders/1vQRTDO_NlncxSh2hzqRUjzH_Q-huXrBT'
-#export_file_url = 'https://drive.google.com/file/d/1QUWukVw6x7g08RTx468gwFVTIS18yFi1/view?usp=sharing'#lien du .pkl
-#export_file_name = 'good_model.pkl'
-export_file_url='https://drive.google.com/file/d/1tSh_AfHa89_eqIYPpH6WO6jghtFIWOKC/view?usp=sharing'#lien du .pth
-export_file_name = 'good_champi_stage-2.pth'
+export_file_url = 'https://drive.google.com/file/d/1QUWukVw6x7g08RTx468gwFVTIS18yFi1/view?usp=sharing'#lien du .pkl
+export_file_name = 'good_model.pkl'
+#export_file_url='https://drive.google.com/file/d/1tSh_AfHa89_eqIYPpH6WO6jghtFIWOKC/view?usp=sharing'#lien du .pth
+#export_file_name = 'good_champi_stage-2.pth'
 
 
 
