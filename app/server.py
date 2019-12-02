@@ -60,16 +60,16 @@ async def homepage(request):
     return HTMLResponse(html_file.open().read())
 	
 	
-@pp.route("/classify-url",mehods=["GET"])
-async def classify_url(request):
-    bytes= await get_bytes(request.query_params["url"])
-    img=open_image(BytesIO(bytes))
-    _,_,losses=learner.predict(img)
-    return JSONResponse({
-        "predictions": sorted(
-        zip(champ_learner.data.classes, map(float,losses)),
-        key=lambda p: p[1], reverse=True)
-    })
+#@pp.route("/classify-url",mehods=["GET"])
+#async def classify_url(request):
+#    bytes= await get_bytes(request.query_params["url"])
+#    img=open_image(BytesIO(bytes))
+#    _,_,losses=learner.predict(img)
+#    return JSONResponse({
+#        "predictions": sorted(
+#        zip(champ_learner.data.classes, map(float,losses)),
+#        key=lambda p: p[1], reverse=True)
+#   })
 
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
