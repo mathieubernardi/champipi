@@ -12,11 +12,12 @@ from starlette.staticfiles import StaticFiles
 #export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
 #export_file_url = 'https://drive.google.com/drive/folders/1vQRTDO_NlncxSh2hzqRUjzH_Q-huXrBT'
 #export_file_url = 'https://drive.google.com/uc?export=download&id=1sUkhWHHm715I3rbCOPAW6q-XbnL-RKIE'
-export_file_url = 'https://drive.google.com/file/d/1peznbLXG8zptnSqZtL56smgLFPksEvSp/view?usp=sharing'
-export_file_name = 'export.pkl'
-#export_file_name = 'export_bearmodel.pkl'
+#export_file_url = 'https://drive.google.com/file/d/1peznbLXG8zptnSqZtL56smgLFPksEvSp/view?usp=sharing'
+export_file_url = 'https://drive.google.com/file/d/1tSh_AfHa89_eqIYPpH6WO6jghtFIWOKC/view?usp=sharing'
+export_file_name = 'good_champi_stage-2.pth'
 
-#classes = ['black', 'grizzly', 'teddys']
+
+
 #classes = ['black', 'teddys', 'grizzly', 'blanc', 'pandas']
 classes = ['cepes', 'girolles', 'trompettes', 'chanterelles', 'sanguins','oronges','pied_de_moutons']
 path = Path(__file__).parent
@@ -36,10 +37,10 @@ async def download_file(url, dest):
 
 
 async def setup_learner():
-    await download_file(export_file_url, path / export_file_name)
-    try:
+	await download_file(export_file_url, path/export_file_name)
+	try:
         learn = load_learner(path, export_file_name)
-        return learn
+		return learn
     except RuntimeError as e:
         if len(e.args) > 0 and 'CPU-only machine' in e.args[0]:
             print(e)
@@ -48,12 +49,10 @@ async def setup_learner():
         else:
             raise
 
-
 loop = asyncio.get_event_loop()
 tasks = [asyncio.ensure_future(setup_learner())]
 learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
 loop.close()
-
 
 @app.route('/')
 async def homepage(request):
