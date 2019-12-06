@@ -8,6 +8,8 @@ from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
+from functools import partial
+import pickle
 
 export_file_url = 'https://drive.google.com/file/d/1mBijkiEHJ5lRIcq-jsjlipvzV-uEvwAj/view?usp=sharing'
 export_file_name = 'export.pkl'
@@ -19,6 +21,9 @@ app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Requested-With', 'Content-Type'])
 app.mount('/static', StaticFiles(directory='app/static'))
 
+pickle.load=partial(pickle.load, encoding="latin1")
+pickle.Unpickler = partial(pickle.Unpickler, encoding="latin1")
+model=torch.load(model_file,map_location=labda storage, loc: storage, pickle_module=pickle)
 
 async def download_file(url, dest):
     if dest.exists(): return
@@ -32,7 +37,7 @@ async def download_file(url, dest):
 async def setup_learner():
     await download_file(export_file_url, path / export_file_name)
     try:
-        learn = load_learner(path, 'export.pkl')
+        learn = load_learner(path, export_file_name)
         return learn
     except RuntimeError as e:
         if len(e.args) > 0 and 'CPU-only machine' in e.args[0]:
