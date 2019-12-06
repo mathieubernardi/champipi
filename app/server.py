@@ -12,10 +12,10 @@ from functools import partial
 import pickle
 
 #mettre a la fin du lien dropbox =1 sinon sa marche pas
-export_file_url = 'https://www.dropbox.com/s/zs7ibysj3ukxg6n/champipi_85.pkl?dl=1'
-export_file_name = 'champipi_85.pkl'
+export_file_url = 'https://www.dropbox.com/s/jvtzrmgk4yd3p8d/champipi_multi83.pkl?dl=1'
+export_file_name = 'champipi_multi83.pkl'
 
-classes = ['cepes', 'girolles', 'trompettes', 'chanterelles', 'sanguins','oronges','pied_de_moutons','mauvais']
+classes = ['cepes', 'girolles', 'trompettes', 'chanterelles', 'sanguins','oronges','pied_de_moutons','mauvais_a','mauvais_b','mauvais_c','mauvais_d']
 path = Path(__file__).parent
 
 app = Starlette()
