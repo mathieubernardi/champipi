@@ -11,6 +11,7 @@ from starlette.staticfiles import StaticFiles
 from functools import partial
 import pickle
 
+#mettre a la fin du lien dropbox =1 sinon sa marche pas
 export_file_url = 'https://www.dropbox.com/s/zs7ibysj3ukxg6n/champipi_85.pkl?dl=1'
 export_file_name = 'champipi_85.pkl'
 
