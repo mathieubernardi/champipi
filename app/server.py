@@ -11,7 +11,7 @@ from starlette.staticfiles import StaticFiles
 from functools import partial
 import pickle
 
-export_file_url = 'https://drive.google.com/file/d/1mBijkiEHJ5lRIcq-jsjlipvzV-uEvwAj/view?usp=sharing'
+export_file_url = 'https://www.dropbox.com/s/2mlfousf4fchfuv/export.pkl?dl=1'
 export_file_name = 'export.pkl'
 
 classes = ['cepes', 'girolles', 'trompettes', 'chanterelles', 'sanguins','oronges','pied_de_moutons','mauvais']
