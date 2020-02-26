@@ -2,7 +2,7 @@
 computer vision for mushroom recognition
 
 This repository contains:
-two differents way to train and deploy the model resnet34 for mushroom recognition,
+two differents way to train and deploy the model for mushroom recognition,
 one for render and the other for AWS sage maker.
 
 I use the Latin name of mushrooms to select images from the internet.
