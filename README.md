@@ -7,8 +7,8 @@ one for render and the other for AWS sage maker.
 
 I use the Latin name of mushrooms to select images from the internet.
 A poisonous class concerns all inedible or poor mushrooms, this allows us to increase the model's accuracy
-a Trompette chanterelle girolle class are use, the mushrooms are from the same family.
+a Trompette_chanterelle_girolle class is use, the mushrooms are from the same family.
 
-I use the pre-trained model Resnet-34 Deep Residual Learning for Image Recognition
+I use the pre-trained model Resnet-34 of fastai Deep Residual Learning for Image Recognition
 
 
