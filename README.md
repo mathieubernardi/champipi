@@ -10,4 +10,5 @@ A poisonous class concerns all inedible or poor mushrooms, this allows us to inc
 a Trompette chanterelle girolle class are use, the mushrooms are from the same family.
 
 I use the pre-trained model Resnet-34 Deep Residual Learning for Image Recognition
-Architecture visualization: http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006
+Architecture visualization: 
+https://imgur.com/nyYh5xH.jpg
